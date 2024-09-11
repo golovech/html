@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+</head>
+<body>
+
+<h3>html 이미지</h3>
+<!--
+	image 태그
+	  ㄴ 웹 페이지의 디자인과 모양을 향상시킵니다!
+	  ㄴ 인라인 모드! (h3은 블럭모드)
+	  ㄴ alt 속성: 이미지를 대체할 텍스트를 지정
+	     src 속성: 이미지가 있는 경로(URL)을 지정
+	     둘다 필수!
+	     
+	     너비 + 높이 속성 x
+	     * 반드시 너비+높이 속성은 설정을 하자! 
+	       왜? -> 설정되지 않으면, 이미지를 로딩하는 동안 웹페이지에 깜빡임이 발생하기 때문.
+	              너비높이 속성을 주면, 이미지 로딩이 미리 끝남.(웹브라우저 동작 원리)
+	  
+	  
+    [어제했던작업]
+    html 폴더 
+      ㄴ images 폴더 생성
+    webapp 폴더
+      ㄴ images 폴더 생성
+           ㄴ SiSt.ico 추가
+           
+    html 기본단위 : 픽셀!
+    css 에서는 픽셀 생략 못함!!
+-->
+
+<!-- 절대경로, 상대경로 -->
+<img alt="이탈리아의 튤립입니다!" src="http://localhost/webPro/images/pic_trulli.jpg" width="500" height="333">
+<img alt="이탈리아의 튤립입니다!" src="./../../images/pic_trulli.jpg" style="width: 250px; height: 166.5px;"> <!-- style 주면 css임. px줘야함!! -->
+<br>
+
+<hr>	<!-- hr태그는 구분선으로 사용 -->
+
+<!--  
+	모든 브라우저에서 일반적으로 지원하는 이미지 파일 형식
+	: gif, ico, jpeg, png, svg, apng
+	
+	(주의) 너무 큰 이미지를 로드하는 데는 시간이 걸린다.
+	    => 웹 페이지에 속도가 느려질 수 있음!	           	
+-->
+
+<a href="http://localhost/webPro/images/pic_trulli.jpg" target="_blank">
+<img alt="이탈리아의 튤립입니다!" src="http://localhost/webPro/images/pic_trulli.jpg" style="width: 250px; height: 166.5px;"></a>
+
+
+
+
+
+</body>
+</html>

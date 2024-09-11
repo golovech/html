@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<style >
+  span {
+	color:red;
+	background-color: pink;
+	border: solid 2px gray;
+	width: 300px;
+}
+</style>
+
+</head>
+<body>
+<!--  
+	[span] 태그
+	  ㄴ 컨테이너역할(용기) : 다른 태그를 담기 위한 역할.
+	  ㄴ 인라인 모드(옆에 붙는)	/ * 인라인 주의: 내용물에 따라 크기가 달라짐 -> style에서 크기 바꿔도 안바뀜!!!! (f12누르면 알수있음)
+-->
+ <span id="team1">
+ 	1조 : <br>
+ 	<span id="흰둥">이시훈</span><span>김준석</span><span>최사랑</span><span>김선우</span>
+ </span>
+ <br>
+ <button onclick="spanHide();">숨기기</button>
+ <button onclick="spanShow();">보이기</button>
+ 
+ <script>
+   function spanHide(){
+	  // alert("숨기기 버튼 클릭");
+	  // var spn1 = document.getElementById("흰둥");
+	  // spn1.style.display="none";
+	  var team1 = document.getElementById("team1");
+	  team1.style.display="none";
+   }
+ </script>
+ 
+ <script>
+   function spanShow(){
+	  var team1 = document.getElementById("team1");
+	  team1.style.display="inline";
+   }
+ </script>
+ 
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script >
+ function areaClick(){
+	 window.alert("축하합니다!! 커피 영역을 클릭하셨습니다!!");
+ }
+</script>
+
+</head>
+<body>
+
+<!-- 
+	[이미지 맵]
+	 ㄴ 맵 == 지도
+	 ㄴ 언제 사용? : 하나의 이미지를 [클릭 가능한 영역]으로 나눠서 -> 다른 작업을 수행할 때 사용
+	 ㄴ <map>  : 이미지 맵을 정의함
+	    <area> : 클릭 가능한 영역을 나누고,
+	    usemap 속성으로 적용시킨다!
+	    
+	     ex04_coffee
+		 ex04_phone
+		 ex04_com
+ -->
+ 
+ <img usemap="#workmap" alt="work" src="../../images/workplace.jpg">
+
+<map name="workmap"> 
+  <area alt="computer" shape="rect" coords="34,44,270,350" href="ex04_computer.html">
+  <area alt="phone" shape="rect" coords="290,172,333,250" href="ex04_phone.html">
+  <!-- 자바스크립트로 click 이벤트 만들어보자 -->
+  <area onclick="areaClick()" alt="coffee" shape="circle" coords="337,300,44" href="ex04_coffee.html">
+</map>
+
+</body>
+</html>
