@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    div{
+        background-color: rgb(255, 146, 146);
+    }
+    span{
+        border: solid 1px  rgb(255, 97, 49) ;
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+
+<button id="btnSH">숨기기</button>
+
+<br>
+<div id="demo">
+    <span>이시훈</span>
+    <span>김선우</span>
+    <span>김준석</span>
+</div>
+
+
+<!-- 자바스크립트 -->
+<script >
+    var demo = document.getElementById("demo");
+    var btnSH = document.getElementById("btnSH");
+
+    var sw = false;
+
+    btnSH.onclick = function(){
+        // if (!sw ) { // 숨기기
+        //     // 항상 오른쪽에는 "문자열" 형태를 줘야함
+        //     demo.style.visibility="hidden";
+        //     // this.innerText = "보이기";
+        // } else { // 트루==보이기
+        //     demo.style.visibility="visible";
+        //     // this.innerText = "숨기기";
+        // }
+
+
+        // js에도 삼항연산자가 있다!! 이게 더 편하다.
+        demo.style.visibility = sw ? "visible" :"hidden";
+        this.innerText = sw ? "숨기기" : "보이기" ;
+        sw = !sw;
+    } // click
+
+</script>
+
+
+</body>
+</html>

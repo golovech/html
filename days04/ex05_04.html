@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        border: solid 1px gray;
+    }
+    /* visibility / display 차이점  */
+    div:nth-child(2){
+        background-color: red;
+        display: none;
+        /* display : 공간은 유지하면서 색깔만 사라짐 */
+    }
+    div:nth-child(3){
+        background-color: yellow;
+        visibility: hidden;
+        /* visibility : 공간까지 몽땅 사라짐 */
+    }
+</style>
+</head>
+<body>
+
+   
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+
+</body>
+</html>

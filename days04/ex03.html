@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    html, body{
+        margin: 0;
+        padding: 0; 
+        /* 0일때는 단위 안줘도됨~ */
+    }
+
+    ul{
+        /* border: solid 1px blue; : 보더를 쓰는 약식 */
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: blue; */
+
+        /* 배경색 */
+        background-color: #333;
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        /* 넘친 부분만큼 다시 칸에 잡힌다.. */
+        overflow: hidden;
+    }
+
+    ul#main li{
+        /* 이미지 플로팅 (float) */
+        float: left;
+    }
+    ul#main li a{
+        color: aliceblue;
+        text-decoration: none;
+        /* border: 1px solid red; */
+        padding: 16px;
+        /* inline모드-> 블록보드로 변경해보자 */
+        display: block;
+    }
+
+    /* nth-child(n) : n번째 li태그만을 나타냄 */
+    ul#main li:nth-child(1){
+        background-color: rgb(255, 47, 47);
+    }
+    ul#main li:last-child{
+        /* float: 정렬 */
+        float: right;
+    }
+
+    /* 활성화된 메뉴는 class속성=active라면? */
+    ul#main li a.active{
+        background-color: #04AA6D;
+        color: white;
+    }
+    /* CSS 선택자 : 여기에선 .클래스명을 줬음 */
+    /* hover:not(선택자) */
+    ul#main li a:hover:not(.active){
+        color: pink;
+        background-color: #111;
+    }
+
+</style>
+</head>
+<body>
+    <!-- <li> 블럭모드 / <a> 인라인모드 -->
+
+	<!-- ul#main>li*4>a -->
+    <ul id="main">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+
+
+
+
+
+</body>
+</html>
