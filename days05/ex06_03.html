@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- 자동완성속성 : autocomplete  -->
+<form action="ex100_ok.jsp" method="get" autocomplete="on">
+    <!-- 밸류 속성값 넣어두기. 매번 치지 말고.. -->
+    <!-- readonly : 읽기전용, 수정불가, 수정불가 항목에 씀 -->
+    <!-- input의 size는 너비값이다. -->
+    <!-- maxlength : 최대문자길이 -->
+    id : <input type="text" name="id" value="admin" readonly="readonly" size="30" maxlength="20"><br>
+    <!-- disabled : 회색, 서브밋 될때 전송되지 않음 -->
+    email : <input type="text" name="email" value="admin@naver.com" disabled="disabled"><br>
+
+    ph-tel : <input type="text" pattern="[0-9]{3}-/d{4}-/d{4}" name="ph-tel" ><br>
+    <!-- step="2" : 버튼 누를때마다 2씩 증가 -->
+    kor : <input type="number" min="0" max="100" value="80" step="2"><br>
+
+    time : <input type="time"><br>
+
+    url : <input type="url"><br>
+
+    search : <input type="search"><br>
+
+
+
+
+</form>
+
+</body>
+</html>
+<!-- 
+[input 속성 종류]
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week"> 
+-->

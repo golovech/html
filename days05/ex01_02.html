@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 뷰포트란? 동일한 웹 페이지가 다양한 기기에 맞춰 크기, 배율을 제어하는 것 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    div#header{
+        background-color: #666;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+    }
+    div#footer{
+        background-color: #777;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 25px;
+    }
+    div#nav{
+        width: 30%;
+        background-color: #ccc;
+        height: 500px;
+        padding: 20px;
+
+    }
+    div#article{
+        width: 70%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        min-height: 500px;
+
+    }
+
+    div#section{
+        /* border: solid 1px red; */
+        display: flex;
+        /*  */
+    }
+    div#section::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<style >
+    /* css 미디어 쿼리 */
+    @media screen and (max-width:800px){
+        div#nav, div#article{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+</style>
+</head>
+<body>
+<!-- 반응형 웹 구현 : 모든 장치(pc,스마트폰,태블릿 등등)의 웹사이트의 크기가 자동으로 조정되는것.
+     (css 미디어 쿼리) 
+-->
+
+<header>
+    <h2>Cites-시멘틱태그(sementic elements)</h2>
+</header>
+</div>
+<section>
+    <nav>
+        <ul>
+            <li><a href="">London</a></li>
+            <li><a href="">Paris</a></li>
+            <li><a href="">Seoul</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h2>London</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla dolorem dolores maiores dolore laborum explicabo quod et distinctio. Quo corrupti maxime a et dolorem beatae quasi iusto suscipit ullam!</p>
+        <p>Est, nihil? Enim commodi dicta officiis sapiente soluta dolores eaque sit, reprehenderit rem debitis quia consequatur! Velit sequi vitae, amet quas perspiciatis, consequatur est perferendis possimus, ratione ad blanditiis qui!</p>
+        <h2>Paris</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum suscipit, itaque nobis quaerat magnam consequatur quisquam? Tempora ratione facilis eos hic vero autem, numquam, aliquid, voluptates expedita animi rerum dolor.</p>
+        <p>Facere, minus non quaerat obcaecati optio expedita rerum id incidunt illo. Modi, pariatur sint reprehenderit quod deleniti maiores doloremque laboriosam voluptates tenetur, aliquam itaque dolorum, quae odio ab. Ipsa, obcaecati.</p>
+        <h2>Seoul</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, nisi suscipit. Assumenda vero repellat eligendi ut, dignissimos veritatis ab at eum sunt, eos magni. Voluptate, nesciunt esse! Aspernatur, a dolorem.</p>
+        <p>Porro nobis enim qui exercitationem esse rem, est totam, necessitatibus sit, ullam nulla? Deserunt adipisci necessitatibus laborum veritatis eos rerum cupiditate dolorum, mollitia totam rem debitis quos dolores dolor laudantium?</p>
+    </article>
+</section>
+<footer>
+    <h2>Footer</h2>
+</footer>
+
+</body>
+</html>

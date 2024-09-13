@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /*
+    class="team"
+      ㄴ 클래스명은 대소문자를 구분한다.
+    id=""
+     ㄴ 아이디명도 대소문자를 구분한다.
+     ㄴ 아이디는 중간에 공백을 사용할 수 없다.
+     ㄴ 숫자로 시작할 수 없다.
+      */
+    .team1{
+        background-color: yellow;
+    }
+    .team2{
+        background-color: green;
+    }
+    li.teamleader{
+        color: red;
+    }
+    
+</style>
+</head>
+<body>
+
+<div class="team1">
+	<ul>
+		 <li class="teamleader">김준석</li>
+         <li>전재윤</li>
+         <li>박준용</li>
+         <li>이시훈</li>
+         <li>송세호</li>
+	</ul>
+</div>
+<div class="team2">
+	<ul>
+		<li class="teamleader">원충희</li>
+        <li>김선우</li>
+        <li>최사랑</li>
+        <li>김재민</li>
+        <li>김인경</li>
+	</ul>
+</div>
+
+<script>
+    // 이름 클릭하면 지워지게, 사용자 반응처리 해보자.
+    // document.getElementById("아이디명"); : 한명만 선택가능
+    // document.getElementsByClassName("team2"); : 그룹을 선택가능
+    var team2List = document.querySelectorAll(".team2 ul li");
+    // alert(team2List.length);
+    for (var i = 0; i < team2List.length; i++){
+        console.log(team2List[i].innerText);
+
+        // li태그에 클릭이벤트를 처리하는 코딩 3 -> addEventListener
+        team2List[i].addEventListener("click",function(){
+            // this.remove();
+            // console.log(this +"/"+team2List[i]);
+            this.nextElementSibling.remove();
+        });
+    } 
+</script>
+
+</body>
+</html>

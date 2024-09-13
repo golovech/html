@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="init()">
+    <form action="">
+        색상 : <input type="color" id="color">
+        <br>
+    설문 시작 날짜 : <input type="date" id="servey_start"><br>
+    설문 종료 날짜 : <input type="date" id="servey_end" min="2024-09-01" max="2024-09-30"><br>
+    <br>
+    datetime-local: <input type="datetime-local"><br>
+    datetime: <input type="datetime"><br>
+    <br>
+    첨부파일: <input type="file" id="attach" name="attach">
+    <br>
+    첨부파일: <input type="file" id="123" name="123">
+    <br>
+    다중 첨부파일: <input type="file" id="234" name="234" multiple="multiple">
+    <br>
+    <!-- 히든 타입(숨겨져있는) : 서버로 보내기 위해 쓰는 것. -->
+    <input type="hidden" name="nickname" value="choisarang"><br>
+    <input type="hidden" name="age" value="27">
+    <br>
+    <!-- 이미지를 버튼역할로 쓰기도 한다. -->
+    <input type="image" src="../../images/programming.gif">
+    <br>
+    <!-- 년+월 선택할 수 있는 input type -->
+     <input type="month" >
+    <br>
+    국어: <input type="number" min="0" max="100" value="10">
+    <br>
+    <!-- 볼륨 올리고 내리기 -->
+    볼륨: <input id="vrange" type="range" min="0" max="100" value="1" style="color: pink;">
+    <br>
+    <input type="button" value="입력값 확인" id="btnRun">
+    </form>
+
+    <p id="demo"></p>
+
+    <script>
+        
+        var vrange = document.querySelector("#vrange");
+        // 현재 볼륨값을 찍는역할. (1 이라고)
+        function init(){
+            demo.innerHTML = "<span style='color:red'>" +vrange.value+"</span>";
+        }
+
+        vrange.oninput = function(){
+           demo.innerHTML = "<span style='color:red'>" +vrange.value+"</span>";
+        }
+
+        document.querySelector("#btnRun").addEventListener("click",function(){
+            //alert("test") / 경고창 확인
+            var color = document.querySelector("#color");
+            var demo = document.querySelector("#demo");
+            var servey_start = document.querySelector("#servey_start");
+            var servey_end = document.querySelector("#servey_end");
+            // <input> 모든 입력한 값은 value 속성값으로 얻어올 수, 설정할 수 있다.
+            var result = ""; 
+            result += "색깔 : " + color;
+            result += "설문시작일 : " + servey_start;
+            result1 += "설문종료일 : " + servey_end;
+
+            demo.style.color = color.value;
+            demo.innerHTML = result;
+        })
+    </script>
+
+</body>
+</html>

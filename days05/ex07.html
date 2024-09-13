@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- 
+	html 그래픽 그리기 - canvas, svg
+		- canvas : 그래픽 컨테이너 역할 (도화지)
+				   그리기 작업
+		- 모든 브라우저에서 지원
+		- 그리기 작업은 js로 한다.
+	html 미디어 다루기
+	html API 다루기 
+ -->
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid black;"></canvas>
+
+<script>
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+
+	// 선을 그리려면? 두 점이 있어야 함.
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+
+	// 원 , 반원(호)
+	ctx.beginPath();
+	// ctx.arc(95, 50, 40, 0 ,  2 * Math.PI ); //원
+	ctx.arc(95, 50, 40, 0 ,  Math.PI ); //호
+	ctx.stroke();
+
+	// 텍스트
+	ctx.font = "30px Arial";
+	ctx.strokeText("안녕하세요",100,50);
+
+
+</script>
+<hr>
+<!-- 
+	[svg]
+-->
+	<svg width="100" heigth="100">
+		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" >
+	</svg>
+
+	<svg width="400" height="100">
+		<rect width="400" height="100"
+		style="stroke:rgb(0,0,0);stroke-width:10;fill:rgb(0,0,255)" />
+	  </svg>
+	  
+	   <svg width="300" height="200">
+		<polygon points="100,10 40,198 190,78 10,78 160,198"
+		style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+		</svg>
+
+</body>
+</html>
